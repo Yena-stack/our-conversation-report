@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="theme-color" content="#f7f6f2">
+  <meta name="description" content="대화에 남은 마음과, 우리가 함께 써갈 다음 이야기. 둘만의 대화 리포트.">
+  <title>사이 — 둘만의 대화 리포트</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <div class="reading-track" aria-hidden="true"><span id="reading-progress"></span></div>
+  <header class="site-header">
+    <a class="brand" href="#/" aria-label="사이, 리포트 전체 보기">사이<span class="brand-dot">.</span><span class="brand-sub">OUR CONVERSATION</span></a>
+    <div class="header-actions" id="header-actions"><span class="private-label"><span class="tiny-lock" aria-hidden="true"></span>둘만의 리포트</span></div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="lock-screen" aria-labelledby="lock-title">
+      <div class="lock-illustration" aria-hidden="true"><div class="letter"><i></i><i></i><i></i><span>♥</span></div><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="little-star">✳</span></div>
+      <p class="eyebrow">A LITTLE MORE HONEST. A LITTLE CLOSER.</p>
+      <h1 id="lock-title">우리 사이를<br>읽는 시간.</h1>
+      <p class="lock-deck">대화에 남은 마음과,<br>우리가 함께 써갈 다음 이야기.</p>
+      <form id="unlock-form" class="unlock-form">
+        <label for="password">리포트 비밀번호</label>
+        <div class="password-field"><input id="password" type="password" autocomplete="current-password" placeholder="전달받은 비밀번호를 입력하세요" required><button type="button" id="show-password" aria-label="비밀번호 표시" aria-pressed="false">표시</button></div>
+        <button type="submit" id="unlock-button" class="button button-dark">리포트 열기 <span aria-hidden="true">↗</span></button>
+        <p id="unlock-error" class="form-message" role="alert" aria-live="polite"></p>
+      </form>
+      <p class="lock-fine"><span class="tiny-lock" aria-hidden="true"></span>비밀번호를 아는 사람만 내용을 읽을 수 있어요.<br>새로고침하거나 탭을 닫으면 다시 잠깁니다.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><a href="#/" class="footer-brand">사이.</a><span>마음을 단정하기보다, 대화를 더 정확하게.</span><span class="footer-year">2026 EDITION</span></footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <div id="print-content"></div>
+  <noscript><p class="noscript">이 리포트를 열려면 브라우저에서 JavaScript를 켜주세요.</p></noscript>
+</body>
+</html>
