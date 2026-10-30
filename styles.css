@@ -30,3 +30,29 @@ h1[tabindex="-1"]:focus{outline:none}
 .new-report-feature{display:block;border:1px solid #c8d9c4;border-radius:16px;padding:32px 34px;margin:40px 0 48px;background:#f3faf0}.new-report-feature h2{font-family:var(--serif);font-size:30px;line-height:1.5;margin:12px 0}.new-report-feature p{font-size:15px;line-height:1.9;color:#596653;max-width:680px}.feature-link{display:inline-block;margin-top:22px;font-size:14px;font-weight:700}.new-report-feature:hover{border-color:#7f9a77}.new-badge{background:#e0eedb;color:#3d6036;border-radius:4px;padding:3px 6px;font-size:9px;letter-spacing:.8px;margin-right:5px}.word-counts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:28px 0}.word-card{border:1px solid #d6e2d1;background:#f5faf2;border-radius:16px;padding:25px 24px}.word-card h3{font-family:var(--serif);font-size:26px;line-height:1.5}.word-unit{font-size:12px;color:var(--muted);margin-top:7px}.word-people{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}.word-people>div{min-width:0}.word-people>div>span{display:block;font-size:13px;color:#586b50;margin-bottom:7px}.word-people strong{font-size:33px;line-height:1.2;letter-spacing:-1px;font-variant-numeric:tabular-nums;white-space:nowrap}.word-people small{font-size:12px;font-weight:400;margin-left:5px;letter-spacing:0}.count-method{border:1px solid var(--line);border-radius:10px;padding:0 22px;margin:28px 0}.count-method summary{font-size:14px;font-weight:600;cursor:pointer;padding:19px 0;line-height:1.6}.count-method>div{padding-bottom:6px}.count-method .prose{font-size:14px;line-height:1.9}.count-method .data-table{font-size:13px}.count-method .data-table th,.count-method .data-table td{padding:12px}.count-method .table-scroll{margin:20px 0}
 @media(max-width:600px){.new-report-feature{padding:25px 23px;margin:30px 0 38px}.new-report-feature h2{font-size:25px}.word-counts{grid-template-columns:1fr;gap:14px}.word-card{padding:23px 24px}.word-people{margin-top:20px}.word-people strong{font-size:35px}.count-method{padding:0 16px}}
 @media print{.word-counts{grid-template-columns:1fr 1fr}.word-card{break-inside:avoid}.count-method>div{display:block!important}.count-method>summary{list-style:none}.new-report-feature{display:none}}
+
+/* Long comparisons remain readable without sideways scrolling on a phone. */
+@media screen and (max-width:600px){
+  .header-button{min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+  .report-actions .button{min-height:46px}
+  .toc summary{min-height:52px;align-items:center}
+  .toc li{font-size:13px;line-height:1.8}
+  .toc li a{display:block;padding:10px 0}
+  .report-list li,.example p{font-size:16px;line-height:1.95}
+  .quote-meta strong{font-size:12px}.quote-meta time{font-size:11px}
+  .table-scroll:has(.mobile-stack){overflow:visible;border:0;border-radius:0;background:transparent}
+  .data-table.mobile-stack{display:block;min-width:0;font-size:15px}
+  .mobile-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  .mobile-stack tbody{display:block}
+  .mobile-stack tbody tr{display:block;border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:14px;background:#fff}
+  .mobile-stack td{display:block;border:0;min-width:0;padding:0;font-weight:400;line-height:1.9;word-break:normal;overflow-wrap:anywhere}
+  .mobile-stack td+td{margin-top:16px;padding-top:14px;border-top:1px solid #eef0e9}
+  .mobile-stack td:before{content:attr(data-label);display:block;font-size:12px;line-height:1.7;font-weight:600;color:#5a6d52;margin-bottom:6px}
+  .mobile-stack td:first-child{font-size:16px;font-weight:600;min-width:0}
+  .mobile-stack caption{display:block;font-size:12px;line-height:1.8;padding:8px 0}
+  .data-table.compact-table{min-width:0;width:100%;font-size:14px}
+  .compact-table th{white-space:normal;font-size:12px}
+  .compact-table td:first-child{min-width:0}
+  .count-method .data-table th,.count-method .data-table td{padding:10px 7px}
+}
+@media screen and (max-width:360px){.header-actions{gap:5px}.header-button{padding:8px 10px}.word-card{padding:21px 20px}.word-people{gap:10px}.word-people strong{font-size:29px}.word-people small{margin-left:3px}}
