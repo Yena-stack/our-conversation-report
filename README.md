@@ -8,11 +8,11 @@ Publish the root of the `main` branch with GitHub Pages. `.nojekyll` is included
 
 ## Privacy
 
-The report payload is encrypted before publication with AES-256-GCM and PBKDF2-SHA-256 (600,000 iterations, random salt and nonce). Decryption happens in the visitor's browser. The password is delivered separately and is never stored in this repository, browser storage, or a URL. Reloading the page removes the unlocked content from the page session.
+The report payload is encrypted before publication with AES-256-GCM and PBKDF2-SHA-256 (600,000 iterations, random salt and nonce). Decryption happens in the visitor's browser. A dedicated reading link contains the access key in its URL fragment. Anyone holding that complete link can read the report without entering a password. The fragment is processed in the browser and is not sent in HTTP requests to GitHub Pages. The access key is not committed to this repository or stored in browser storage; it can appear in browser history and copied links. The lock button removes the key from the current URL.
 
 The original chat archive, attachments, and authoring sources are not part of this repository. The published content contains selected quotations and interpretive analysis, not a full chat export. Scores are subjective editorial assessments.
 
-As with any password-protected document, someone who knows the password can save or share its contents. Keep the password private. Search-engine exclusion is requested via robots directives; those directives are not an access-control mechanism.
+As with any password-protected document, someone who knows the password can save or share its contents. Share the complete reading link only with intended readers. Search-engine exclusion is requested via robots directives; those directives are not an access-control mechanism.
 
 ## Interface
 
